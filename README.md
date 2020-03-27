@@ -27,10 +27,21 @@ In this project you will create a login page and request a token from the server
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain what a token is used for.
+
+        1.	A token is used for authentication when navigating to protected routes within an application. The token is an identifier that is provided by the server once login credentials that are validated have been received. Once the token has been received by the browser, it can be stored in local storage in browser and used as a ‘key’ to provide access to routes that have been deemed protected within the application.
+
 - [ ] What steps can you take in your web apps to keep your data secure?
+
+        2.	In order to keep your data secure within a web application, you can manage access by creating protected routes that can only be accessed once the user has received a token from the web server. This token is provided only after login credentials have been validated thereby preventing any unauthorized access. Each of these ‘protected’ routes will verify that there is in fact a ‘token’ in local storage prior to mounting the component that is being rendered on that route, and if there is no ‘token’ present, then it will redirect the user to the login page.
+
 - [ ] Describe how web servers work.
+
+        3.	Web servers physically store the code for web applications, as well as software that processes incoming and outgoing network requests emanating to and from the applications whose code is stored on them. The primary function of these webservers is to ‘serve’ web pages to clients.
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
 
+
+        4.	CRUD is an acronym that is used in reference to interfacing with API’s and servers. The ‘C’ stands for Create and can be mapped to the HTTP POST request method. The ‘R’ in CRUD stands for Read and is mapped to the HTTP GET request. The ‘U’ in CRUD stands for update and is in reference to the HTTP PUT request method. Finally, the ‘D’ in CRUD stands for delete/destroy and is in reference to the HTTP DELETE request method.
 
 ## Project Set Up
 
@@ -51,9 +62,9 @@ Follow these steps to set up and work on your project:
 
 Follow these steps for completing your project:
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo).
+- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo).
 - [ ] Add your Project Manager as a Reviewer on the Pull-request
-- [ ] PM then will count the HW as done by  merging the branch back into master.
+- [ ] PM then will count the HW as done by merging the branch back into master.
 
 ## Minimum Viable Product
 
@@ -76,11 +87,11 @@ Build a login form to authenticate your users.
 
 ### API Documentation
 
-  * **[POST]** * to `/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'Lambda School', password: 'i<3Lambd4' }`
-  * **[GET]** to `/api/colors`: returns the list of colors and their hex codes.
-  * **[POST]** to `/api/colors`: creates a new color object. Pass the color as the `body` of the request (the second argument passed to `axios.post`).
-  * **[PUT]** to `/api/colors/:id`: updates the color using the `id` passed as part of the URL. Send the color object with the updated information as the `body` of the request (the second argument passed to `axios.put`).
-  * **[DELETE]** to `/api/colors/123`: removes the color using the `id` passed as part of the URL (123 in example).
+- **[POST]** \* to `/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'Lambda School', password: 'i<3Lambd4' }`
+- **[GET]** to `/api/colors`: returns the list of colors and their hex codes.
+- **[POST]** to `/api/colors`: creates a new color object. Pass the color as the `body` of the request (the second argument passed to `axios.post`).
+- **[PUT]** to `/api/colors/:id`: updates the color using the `id` passed as part of the URL. Send the color object with the updated information as the `body` of the request (the second argument passed to `axios.put`).
+- **[DELETE]** to `/api/colors/123`: removes the color using the `id` passed as part of the URL (123 in example).
 
 ## STRETCH PROBLEMS
 
